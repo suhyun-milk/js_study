@@ -1,0 +1,22 @@
+<script>
+    const promise = new Promise(
+        // executor function
+        (resolve, reject) => {
+            //   비동기작업
+            const data = { name: 'ghost', age: 1000 }
+            setTimeout(() => {
+                if (data) {
+                    console.log("네트워크 요청 성공");
+                    resolve(data);
+                } else {
+                    reject(new Error("No data"));
+                }
+            }, 1000);
+        }
+    );
+
+    setTimeout(() => {
+        console.log(promise);
+    }, 2000);
+
+</script>
