@@ -1,24 +1,13 @@
-const arr = [1, 2, 3, 4];
-result = arr.map((num) => Math.pow(num, 2));
+const fruits = ["apple", "watermelon", "banana"];
 
-result = arr.reduce((a, c) => a + c, 0);
+function getSize(item) {
+  return item.length;
+}
 
-result = arr.find((a) => a > 2);
+function create(items) {
+  return items.map((a) => getSize(a));
+}
 
-const score = [100, 90, 32, 80];
-result = score.some((a) => a < 60);
-result = result ? "fail" : "success";
-
-console.log(result);
-result = score.every((a) => a >= 60);
-result = result ? "sucess" : "fail";
-console.log(result);
-
-const animals = ["milk", "bobby", "bombi"];
-const target = "milk";
-result = animals.includes(target);
-console.log(result);
-
-const arr2 = [2, 5, 8, 1, 10];
-result = arr2.filter((a) => a >= 5).map((a) => a * 2);
-console.log(result);
+function renderResult() {
+  return create;
+}
